@@ -152,12 +152,16 @@ const WorkoutDetails = ({workout}) => {
           {/* <button onClick={handleNavigate}>Read More</button> */}
 
           {/* Delete/Edit Buttons */}
-          <span onClick={handleEdit}>
-            <i className='fa-solid fa-pen'></i>
-          </span>
-          <span onClick={handleDelete}>
-            <i className='fa-solid fa-trash'></i>
-          </span>
+          {workout.user_id === user_id && (
+            <>
+              <span onClick={handleEdit}>
+                <i className='fa-solid fa-pen'></i>
+              </span>
+              <span onClick={handleDelete}>
+                <i className='fa-solid fa-trash'></i>
+              </span>
+            </>
+          )}
         </>
       )}
 
